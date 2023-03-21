@@ -1,0 +1,53 @@
+@use '../abstracts/abstracts' as *;
+@use '../utilities/utilities' as *;
+
+//? Resets
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+//? Global Styles
+
+body {
+  background: $body-bg-color;
+}
+
+main {
+  @include adjustMargin;
+
+  margin-inline: $main-margin;
+  margin-top: $main-margin-block;
+}
+
+section {
+  @include flexCol;
+  min-height: 100vh;
+  padding-block: 2rem;
+  margin-bottom: 3rem;
+}
+
+#home {
+  min-height: calc(100vh - 5rem);
+}
+
+footer {
+  height: 8rem;
+  background-color: $footer-bg-color;
+}

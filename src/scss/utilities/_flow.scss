@@ -1,0 +1,21 @@
+// LAYOUT FLOW
+
+// Margins
+
+//? Main Inline Margin
+$main-margin: clamp(1.5rem, 15vw, 10rem);
+
+//? Block Margin
+$main-margin-block: clamp(2rem, 10vh, 5rem);
+
+// Breakpoints
+
+//? Medium
+$breakpoint1: 768px;
+//? Small
+$breakpoint2: 481px;
+//? Projects Section
+$projects-breakpoint: 900px;
+
+// Styles
+$border-radius: 3px;

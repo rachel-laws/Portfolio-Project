@@ -1,0 +1,40 @@
+// MIXINS
+
+@use '../utilities/utilities' as *;
+
+// Utilities
+
+//? Flex Center (Row)
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//? Flex Center (Column)
+@mixin flexCol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+// Media Queries
+
+//? Max-Width
+@mixin MqW($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+//? Main Margins
+@mixin adjustMargin() {
+  @include MqW($breakpoint1) {
+    margin-inline: 3rem;
+  }
+
+  @include MqW($breakpoint2) {
+    margin-inline: 0.5rem;
+  }
+}

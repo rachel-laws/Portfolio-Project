@@ -1,0 +1,49 @@
+@use '../abstracts/abstracts' as *;
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  color: $body-text-color;
+}
+
+nav {
+  font-weight: 700;
+  color: $nav-text-color;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+  color: $h1-text-color;
+  font-family: 'Dancing Script', cursive;
+}
+
+.heading-accent {
+  margin-bottom: 2rem;
+}
+
+.hero__name {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+  font-weight: 800;
+  text-align: center;
+  color: $h2-text-color;
+}
+
+label {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: $h1-text-color;
+}
+
+.name {
+  font-size: 2rem;
+  font-weight: 800;
+}

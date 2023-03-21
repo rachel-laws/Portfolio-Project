@@ -1,0 +1,15 @@
+@use '../abstracts/abstracts' as *;
+@use '../utilities/utilities' as *;
+
+.sendFormBtn {
+  border: none;
+  border-radius: $border-radius;
+  background: $button-color;
+
+  color: $button-text-color;
+
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+}

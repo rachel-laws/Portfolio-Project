@@ -1,0 +1,21 @@
+@use '../utilities/utilities' as *;
+@use '../abstracts/abstracts' as *;
+
+#contact {
+  .socials {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    
+    color: $button-color;
+
+    i {
+      font-size: 3rem;
+    }
+
+    .fa-envelope {
+      font-size: 3.3rem;
+    }
+  }
+}

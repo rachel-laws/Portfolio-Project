@@ -1,0 +1,43 @@
+@use '../utilities/utilities' as *;
+@use '../abstracts/abstracts' as *;
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: calc(100% - 1.2rem);
+  padding-inline: $main-margin;
+
+  background-color: $nav-bg-color;
+
+  @include MqW($breakpoint1) {
+    padding-inline: 1rem;
+  }
+
+  ul {
+    @include flexCenter;
+
+    gap: calc(0.5rem + 5vw);
+    padding: 0.5rem 1rem;
+
+    width: 100%;
+  }
+
+  .nav__logo {
+    width: 5rem;
+    height: 100%;
+    margin-right: 10px;
+    padding: 0.5rem;
+    font-size: 2.3rem;
+  }
+
+  button {
+    font-size: 1.3rem;
+    color: $button-color;
+    padding: 0.5rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+}

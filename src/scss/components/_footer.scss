@@ -1,0 +1,38 @@
+@use '../abstracts/abstracts' as *;
+@use '../utilities/utilities' as *;
+
+// TODO: Edit colors
+// TODO: Add in logo
+// TODO: Add hrefs
+
+footer {
+  @include flexCol;
+  font-size: 0.9rem;
+  gap: 1.2rem;
+
+  ul {
+    display: flex;
+    gap: 1.2rem;
+  }
+
+  li {
+    position: relative;
+  }
+
+  li:not(:last-child)::after {
+    content: '-';
+    position: absolute;
+    right: -12px;
+    bottom: 1px;
+  }
+
+  .sourceCode {
+    border: 1px solid $body-text-color;
+    padding: 0.25rem 0.5rem;
+    border-radius: $border-radius;
+
+    i {
+      margin-right: 2px;
+    }
+  }
+}
