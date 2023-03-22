@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
+      rel="stylesheet" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
@@ -13,17 +19,6 @@
 
   <body>
     <header>
-      <div class="infobar">
-        <a href="https://github.com/rachel-laws" target="_blank" title="GitHub"
-          ><i class="fa-brands fa-square-github"></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/rachel-lawson-a50112261/"
-          target="_blank"
-          title="LinkedIn"
-          ><i class="fa-brands fa-linkedin"></i
-        ></a>
-      </div>
       <nav>
         <div class="nav__logo">RL</div>
         <ul>
@@ -43,16 +38,12 @@
     </header>
 
     <main>
-      <div class="hero">
-        <h1 class="hero__name"><span>Welcome to my </span>Portfolio</h1>
-      </div>
-
       <section id="home">
-        <div class="home__left">
+        <div class="hero__text">
           <h2><span class="name">Rachel Lawson</span>Front-End Developer</h2>
         </div>
-        <div class="home__right">
-          <img src="" alt="" />
+        <div class="hero">
+          <h1 class="hero__intro"><span>Welcome to my </span>Portfolio</h1>
         </div>
       </section>
 
@@ -263,6 +254,7 @@
         <h1>Contact Me</h1>
         <img class="heading-accent" src="/assets/images/Accent.svg" alt="" />
         <form class="contact-form" action="">
+          <img class="paperplane" src="/assets/images/Plane.svg" alt="" />
           <label for="name">Full Name</label>
           <input
             type="text"

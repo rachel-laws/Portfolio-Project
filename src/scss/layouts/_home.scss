@@ -1,2 +1,28 @@
 @use '../utilities/utilities' as *;
 @use '../abstracts/abstracts' as *;
+
+#home {
+  .hero__intro {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem; //! CHANGE .. animate?
+  }
+
+  .hero__text {
+    text-align: right;
+    margin-bottom: 4rem;
+    font-size: clamp(1rem, 10vw, 2rem);
+  }
+
+  .name {
+    display: block;
+
+    color: transparent;
+    background: $name-color;
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-bottom: 1rem;
+
+    font-size: clamp(2.3rem, 10vw, 4.4rem);
+    text-align: center;
+  }
+}

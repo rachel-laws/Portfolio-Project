@@ -21,10 +21,10 @@ form {
   }
 
   label {
-    margin-block: 10px;
+    margin: 1rem 0 10px;
   }
 
-  input,
+  input:not(input[type='submit']),
   textarea {
     width: 100%;
 
@@ -48,17 +48,10 @@ form {
     font-family: inherit;
     resize: none;
   }
-
-  .sendFormBtn {
-    width: 30%;
-    min-width: min-content;
-    margin-inline: auto;
-    margin-bottom: 0.75rem;
-    padding: 0.75rem 1rem;
-  }
 }
 
 form::after {
+  //! CHANGE
   content: '';
   position: absolute;
   z-index: -99;
@@ -75,4 +68,16 @@ form::after {
     #fff 90%,
     transparent
   );
+}
+
+.paperplane {
+  //! ADJUST FOR SMALL SCREENS
+  position: absolute;
+  top: -3rem;
+  left: -51.92px;
+  z-index: 99;
+
+  width: 6rem;
+  transform: rotate(22deg);
+  filter: brightness(85%);
 }

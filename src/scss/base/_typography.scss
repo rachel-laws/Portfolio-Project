@@ -1,49 +1,54 @@
 @use '../abstracts/abstracts' as *;
 
+//* Typography
+
+//? Default Body
 body {
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 600;
-
+  font-family: 'Montserrat', sans-serif;
   color: $body-text-color;
+
+  font-size: 1.1rem;
 }
 
+//? Navigation
 nav {
-  font-weight: 700;
   color: $nav-text-color;
+  letter-spacing: 1px;
 }
 
+//? Headings
 h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  text-align: center;
+  font-family: 'Playfair Display', serif;
   color: $h1-text-color;
-  font-family: 'Dancing Script', cursive;
+
+  font-size: 3.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+
+  text-align: center;
 }
 
+//! CHANGE
 .heading-accent {
-  margin-bottom: 2rem;
+  margin-bottom: 2rem; //! CHANGE
 }
-
-.hero__name {
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 2.2rem;
-}
+//! CHANGE
 
 h2 {
-  font-size: 1.7rem;
-  font-weight: 800;
-  text-align: center;
+  font-family: 'Playfair Display', serif;
   color: $h2-text-color;
-}
 
-label {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: $h1-text-color;
-}
-
-.name {
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+//? Form Labels
+label {
+  font-family: 'Playfair Display', serif;
+  color: $h1-text-color;
+
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  text-indent: 1px;
 }

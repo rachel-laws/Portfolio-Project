@@ -1,15 +1,54 @@
 @use '../abstracts/abstracts' as *;
 @use '../utilities/utilities' as *;
 
+button,
+.project-links,
 .sendFormBtn {
   border: none;
   border-radius: $border-radius;
+  font-family: 'Montserrat', sans-serif;
+  color: $button-text-color;
+}
+
+.sendFormBtn {
   background: $button-color;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+.sendFormBtn {
+  min-width: 10rem;
+  margin-inline: auto;
+  margin-bottom: 0.75rem;
+  padding: 0.75rem;
+  font-weight: 700;
 
   color: $button-text-color;
-
-  font-size: 1.1rem;
-  letter-spacing: 1px;
+  border-radius: $border-radius;
+  background-color: $button-color;
 
   cursor: pointer;
+}
+
+//? Project section links
+.project-links {
+  //? View project
+  a {
+    min-width: 14rem;
+    margin-top: 1rem;
+    padding: 0.75rem;
+
+    font-weight: 700;
+    text-align: center;
+
+    border-radius: $border-radius;
+    background: $button-color;
+  }
+
+  //? See source code
+  a:last-of-type {
+    background: transparent;
+    outline: 1px solid $button-text-color;
+    outline-offset: -1px;
+  }
 }

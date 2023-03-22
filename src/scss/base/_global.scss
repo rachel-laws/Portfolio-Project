@@ -33,10 +33,9 @@ main {
   @include adjustMargin;
 
   margin-inline: $main-margin;
-  margin-top: $main-margin-block;
 }
 
-section {
+section:not(#home) {
   @include flexCol;
   min-height: 100vh;
   padding-block: 2rem;
@@ -44,7 +43,8 @@ section {
 }
 
 #home {
-  min-height: calc(100vh - 5rem);
+  min-height: calc(100vh - 4rem);
+  padding: 4rem 1rem;
 }
 
 footer {
