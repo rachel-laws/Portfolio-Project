@@ -6,10 +6,13 @@ nav {
   justify-content: space-between;
   align-items: center;
 
-  height: 4rem;
+  height: $navbar-height;
   padding-inline: $main-margin;
 
-  background-color: $nav-bg-color;
+  background: $nav-bg-color;
+  @supports (backdrop-filter: blur(2rem)) {
+    backdrop-filter: blur(2rem);
+  }
 
   @include MqW($breakpoint1) {
     padding-inline: 1rem;
@@ -30,14 +33,5 @@ nav {
     margin-right: 10px;
     padding: 0.5rem;
     font-size: 2.3rem;
-  }
-
-  button {
-    font-size: 1.3rem;
-    color: $nav-text-color;
-    padding: 0.5rem;
-    border: none;
-    background: transparent;
-    cursor: pointer;
   }
 }

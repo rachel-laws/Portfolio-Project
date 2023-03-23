@@ -23,8 +23,8 @@
         <div class="nav__logo">RL</div>
         <ul>
           <!-- <li><a href="#home">Home</a></li> -->
-          <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -39,29 +39,22 @@
 
     <main>
       <section id="home">
-        <div class="hero__text">
-          <h2><span class="name">Rachel Lawson</span>Front-End Developer</h2>
-        </div>
+        <h1 class="hero__intro"><span>Welcome to my </span>Portfolio.</h1>
         <div class="hero">
-          <h1 class="hero__intro"><span>Welcome to my </span>Portfolio</h1>
+          <div class="hero__text">
+            <h2 class="name">Rachel Lawson</h2>
+            <span>Front-End Developer</span>
+          </div>
         </div>
-      </section>
-
-      <section id="about">
-        <div class="about__container">
-          <img class="about__image" src="" alt="" />
-          <h1 class="about__title">About Me</h1>
-          <img class="heading-accent" src="/assets/images/Accent.svg" alt="" />
-        </div>
-        <div class="about__text">
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam ipsa
-            sapiente sint accusamus.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-            blanditiis tempora sint aperiam! Cum aliquid sequi amet ex.
-          </p>
+        <a class="cta" href="#projects">See My Work</a>
+        <img
+          class="arrow"
+          src="/assets/images/Arrow.svg"
+          alt="Arrow pointing down" />
+        <div class="video-container">
+          <video class="video" loop="true" autoplay muted>
+            <source src="/assets/video.mov" />
+          </video>
         </div>
       </section>
 
@@ -155,6 +148,24 @@
               </div>
             </figcaption>
           </figure>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="about__container">
+          <img class="about__image" src="" alt="" />
+          <h1 class="about__title">About Me</h1>
+          <img class="heading-accent" src="/assets/images/Accent.svg" alt="" />
+        </div>
+        <div class="about__text">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam ipsa
+            sapiente sint accusamus.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+            blanditiis tempora sint aperiam! Cum aliquid sequi amet ex.
+          </p>
         </div>
       </section>
 
@@ -319,5 +330,6 @@
         ><i class="fa-solid fa-code"></i> Source Code
       </a>
     </footer>
+    <script src="/dist/js/main.js"></script>
   </body>
 </html>

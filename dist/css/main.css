@@ -18,8 +18,15 @@ a {
   color: inherit;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
 body {
-  background: #272727;
+  background: #1f1f1f;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 main {
@@ -63,7 +70,7 @@ body {
 }
 
 nav {
-  color: #3f93dc;
+  color: #4ca3ef;
   letter-spacing: 1px;
 }
 
@@ -96,24 +103,71 @@ label {
   text-indent: 1px;
 }
 
+#home {
+  margin-top: 4rem;
+}
 #home .hero__intro {
   font-family: "Playfair Display", serif;
-  font-size: 2.8rem;
+  font-size: 3.5rem;
+}
+#home .hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2rem;
 }
 #home .hero__text {
   text-align: right;
-  margin-bottom: 4rem;
-  font-size: clamp(1rem, 10vw, 2rem);
+  border-radius: 3px;
+  padding: 2rem 3rem;
+  background: rgba(0, 0, 0, 0.5);
+}
+@supports (backdrop-filter: blur(2rem)) {
+  #home .hero__text {
+    backdrop-filter: blur(2rem);
+  }
+}
+#home .hero__text span {
+  font-size: 1.5rem;
+  opacity: 0.8;
 }
 #home .name {
-  display: block;
+  font-size: calc(2rem + 5vw);
   color: transparent;
   background: linear-gradient(0deg, #003ad9, #5defff);
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-bottom: 1rem;
-  font-size: clamp(2.3rem, 10vw, 4.4rem);
-  text-align: center;
+}
+#home .arrow {
+  width: 1.25rem;
+  margin: 1.85rem auto;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -999;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: fade-in 4s linear 1;
 }
 
 #projects .projects__container {
@@ -127,7 +181,7 @@ label {
   align-items: center;
   grid-template-columns: 1fr 1fr;
   border-radius: 3px;
-  background: #151515;
+  background: rgba(0, 0, 0, 0.7);
 }
 #projects .project__item .switchOrder {
   order: 1;
@@ -176,7 +230,7 @@ label {
   margin-bottom: 4rem;
   padding: 0.5rem;
   border-radius: 3px;
-  background-color: #151515;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 @media only screen and (max-width: 481px) {
   .skills__container {
@@ -244,7 +298,12 @@ nav {
   align-items: center;
   height: 4rem;
   padding-inline: clamp(1.5rem, 15vw, 10rem);
-  background-color: #151515;
+  background: rgba(0, 0, 0, 0.7);
+}
+@supports (backdrop-filter: blur(2rem)) {
+  nav {
+    backdrop-filter: blur(2rem);
+  }
 }
 @media only screen and (max-width: 768px) {
   nav {
@@ -266,13 +325,30 @@ nav .nav__logo {
   padding: 0.5rem;
   font-size: 2.3rem;
 }
+
 nav button {
-  font-size: 1.3rem;
-  color: #3f93dc;
   padding: 0.5rem;
+  font-size: 1.3rem;
+  color: #4ca3ef;
   border: none;
   background: transparent;
   cursor: pointer;
+}
+
+.cta {
+  width: 12rem;
+  margin: auto;
+  padding: 0.75rem;
+  font-size: 1.5rem;
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.5);
+}
+@supports (backdrop-filter: blur(2rem)) {
+  .cta {
+    backdrop-filter: blur(2rem);
+  }
 }
 
 button,
@@ -282,24 +358,6 @@ button,
   border-radius: 3px;
   font-family: "Montserrat", sans-serif;
   color: #fbfbfb;
-}
-
-.sendFormBtn {
-  background: linear-gradient(0deg, #0222f6, #00b0e1);
-  font-size: 1.3rem;
-  letter-spacing: 1px;
-}
-
-.sendFormBtn {
-  min-width: 10rem;
-  margin-inline: auto;
-  margin-bottom: 0.75rem;
-  padding: 0.75rem;
-  font-weight: 700;
-  color: #fbfbfb;
-  border-radius: 3px;
-  background-color: linear-gradient(0deg, #0222f6, #00b0e1);
-  cursor: pointer;
 }
 
 .project-links a {
@@ -317,6 +375,20 @@ button,
   outline-offset: -1px;
 }
 
+.sendFormBtn {
+  min-width: 10rem;
+  margin-inline: auto;
+  margin-bottom: 0.75rem;
+  padding: 0.75rem;
+  font-size: 1.3rem;
+  color: #fbfbfb;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  background: linear-gradient(0deg, #0222f6, #00b0e1);
+  cursor: pointer;
+}
+
 form {
   position: relative;
   display: flex;
@@ -326,7 +398,7 @@ form {
   margin-bottom: 1rem;
   padding: 1rem 3rem;
   border-radius: 3px;
-  background: #151515;
+  background: rgba(0, 0, 0, 0.7);
 }
 @media only screen and (max-width: 768px) {
   form {

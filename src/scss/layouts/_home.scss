@@ -1,28 +1,81 @@
 @use '../utilities/utilities' as *;
 @use '../abstracts/abstracts' as *;
 
+// TODO: Make responsive
+// TODO: Add parallax scroll
+// TODO: Get better fonts
+// TODO: Finalize colors and styles
+
 #home {
+  margin-top: $navbar-height;
+
   .hero__intro {
     font-family: 'Playfair Display', serif;
-    font-size: 2.8rem; //! CHANGE .. animate?
+    font-size: 3.5rem; //! CHANGE .. animate?
+  }
+
+  .hero {
+    //! WHOLE PAGE NEEDS TO BE MADE RESPONSIVE
+    @include flexCol;
+    margin: 2rem;
   }
 
   .hero__text {
     text-align: right;
-    margin-bottom: 4rem;
-    font-size: clamp(1rem, 10vw, 2rem);
+    border-radius: $border-radius;
+    padding: 2rem 3rem;
+
+    background: $hero-bg-color;
+    @supports (backdrop-filter: blur(2rem)) {
+      backdrop-filter: blur(2rem);
+    }
+
+    span {
+      font-size: 1.5rem;
+      opacity: 0.8;
+    }
   }
 
   .name {
-    display: block;
+    font-size: calc(2rem + 5vw);
 
     color: transparent;
     background: $name-color;
     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 1rem;
-
-    font-size: clamp(2.3rem, 10vw, 4.4rem);
-    text-align: center;
   }
+
+  .arrow {
+    width: 1.25rem;
+    margin: 1.85rem auto; //! RESPONSIVE
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -999;
+
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  animation: fade-in 4s linear 1;
 }

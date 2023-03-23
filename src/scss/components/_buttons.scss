@@ -1,6 +1,38 @@
 @use '../abstracts/abstracts' as *;
 @use '../utilities/utilities' as *;
 
+//? Nav buttons
+nav button {
+  padding: 0.5rem;
+
+  font-size: 1.3rem;
+  color: $nav-text-color;
+
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+}
+
+//? Call to action
+.cta {
+  width: 12rem;
+  margin: auto;
+  padding: 0.75rem;
+
+  font-size: 1.5rem;
+  text-align: center;
+
+  border: 1px solid #fff;
+  border-radius: $border-radius;
+  background: $hero-bg-color;
+
+  @supports (backdrop-filter: blur(2rem)) {
+    backdrop-filter: blur(2rem);
+  }
+}
+
+//? Resets
 button,
 .project-links,
 .sendFormBtn {
@@ -8,26 +40,6 @@ button,
   border-radius: $border-radius;
   font-family: 'Montserrat', sans-serif;
   color: $button-text-color;
-}
-
-.sendFormBtn {
-  background: $button-color;
-  font-size: 1.3rem;
-  letter-spacing: 1px;
-}
-
-.sendFormBtn {
-  min-width: 10rem;
-  margin-inline: auto;
-  margin-bottom: 0.75rem;
-  padding: 0.75rem;
-  font-weight: 700;
-
-  color: $button-text-color;
-  border-radius: $border-radius;
-  background-color: $button-color;
-
-  cursor: pointer;
 }
 
 //? Project section links
@@ -51,4 +63,22 @@ button,
     outline: 1px solid $button-text-color;
     outline-offset: -1px;
   }
+}
+
+//? Contact form button
+.sendFormBtn {
+  min-width: 10rem;
+  margin-inline: auto;
+  margin-bottom: 0.75rem;
+  padding: 0.75rem;
+
+  font-size: 1.3rem;
+  color: $button-text-color;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  border-radius: $border-radius;
+  background: $button-color;
+
+  cursor: pointer;
 }
