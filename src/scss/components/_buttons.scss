@@ -3,7 +3,7 @@
 
 //? Nav buttons
 nav button {
-  padding: 0.5rem;
+  padding: 0 0.5rem;
 
   font-size: 1.3rem;
   color: $nav-text-color;
@@ -14,32 +14,56 @@ nav button {
   cursor: pointer;
 }
 
-//? Call to action
-.cta {
-  width: 12rem;
-  margin: auto;
-  padding: 0.75rem;
+//? Hero Call-To-Action
+.cta-btn {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 
-  font-size: 1.5rem;
-  text-align: center;
+  padding: 0.5rem 0.75rem;
 
-  border: 1px solid #fff;
+  font-size: 1rem;
+
   border-radius: $border-radius;
-  background: $hero-bg-color;
-
+  border: 1px solid #fff;
+  background: $tint-color;
   @supports (backdrop-filter: blur(2rem)) {
     backdrop-filter: blur(2rem);
+  }
+
+  transition: 0.3s ease;
+  * &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: -1;
+
+    height: 100%;
+    width: 100%;
+
+    background: #fff;
+    transition: 0.3s ease;
+  }
+  &:hover {
+    color: #000;
+    &:before {
+      left: 0;
+    }
   }
 }
 
 //? Resets
 button,
 .project-links,
-.sendFormBtn {
+input[type='submit'] {
   border: none;
   border-radius: $border-radius;
-  font-family: 'Montserrat', sans-serif;
+
   color: $button-text-color;
+  font-family: 'Montserrat', sans-serif;
+
+  cursor: pointer;
 }
 
 //? Project section links
@@ -79,6 +103,4 @@ button,
 
   border-radius: $border-radius;
   background: $button-color;
-
-  cursor: pointer;
 }

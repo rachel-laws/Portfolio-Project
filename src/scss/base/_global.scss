@@ -51,8 +51,9 @@ section:not(#home) {
 }
 
 #home {
-  min-height: calc(100vh - $navbar-height);
-  padding: 4rem 1rem;
+  @include flexCol;
+  min-height: 100vh;
+  position: relative;
 }
 
 footer {

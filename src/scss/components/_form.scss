@@ -50,34 +50,14 @@ form {
   }
 }
 
-form::after {
-  //! CHANGE
-  content: '';
-  position: absolute;
-  z-index: -99;
-  top: calc(100% + 2.5rem);
-  left: 0;
-
-  width: 30%;
-  height: 2px;
-
-  background: linear-gradient(
-    90deg,
-    transparent,
-    #fff 10%,
-    #fff 90%,
-    transparent
-  );
-}
-
 .paperplane {
   //! ADJUST FOR SMALL SCREENS
   position: absolute;
-  top: -3rem;
-  left: -51.92px;
+  top: -2.5rem;
+  left: -45px;
   z-index: 99;
 
-  width: 6rem;
+  width: 5rem;
   transform: rotate(22deg);
   filter: brightness(85%);
 }

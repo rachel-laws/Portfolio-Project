@@ -3,12 +3,25 @@
 
 #contact {
   .socials {
+    position: relative;
     display: flex;
     justify-content: start;
     align-items: center;
     gap: 10px;
 
     color: #fff;
+
+    // .socials::after {
+    //   content: '';
+    //   position: absolute;
+    //   left: 0;
+
+    //   width: 10rem;
+    //   height: 1px;
+    //   top: 0;
+
+    //   background: $line-fade-color;
+    // }
 
     i {
       font-size: 3rem;

@@ -8,22 +8,15 @@
 footer {
   @include flexCol;
   font-size: 0.9rem;
-  gap: 1.2rem;
+  gap: 1.4rem;
 
   ul {
     display: flex;
-    gap: 1.2rem;
+    gap: calc(0.75rem + 2vw);
   }
 
   li {
     position: relative;
-  }
-
-  li:not(:last-child)::after {
-    content: '-';
-    position: absolute;
-    right: -12px;
-    bottom: 1px;
   }
 
   .sourceCode {

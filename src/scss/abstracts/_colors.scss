@@ -1,13 +1,21 @@
 //? Text
 
-$nav-text-color: #4ca3ef;
+$nav-text-color: #ffffff;
 $body-text-color: #fbfbfb;
 
 $h1-text-color: #fbfbfb;
 $h2-text-color: #fbfbfb;
 $name-color: linear-gradient(0deg, #003ad9, #5defff);
 
+//? Accents
 $accent-color: #3f93dc;
+$line-fade-color: linear-gradient(
+  90deg,
+  transparent,
+  #fff 25%,
+  #fff 75%,
+  transparent
+);
 
 //? Buttons
 
@@ -18,7 +26,14 @@ $button-text-color: #fbfbfb;
 
 $nav-bg-color: rgb(0 0 0 / 0.7);
 
-$hero-bg-color: rgb(0 0 0 / 0.5);
+$hero-bg-color: linear-gradient(
+  to bottom right,
+  #54acf4e1,
+  #309df6a6,
+  #4b4ef4c0,
+  #683ab7d1
+);
+$tint-color: rgb(0 0 0 / 0.3);
 
 $body-bg-color: #1f1f1f;
 $footer-bg-color: #171717;

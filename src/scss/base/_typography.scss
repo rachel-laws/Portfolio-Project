@@ -14,11 +14,12 @@ body {
 nav {
   color: $nav-text-color;
   letter-spacing: 1px;
+  font-size: 1rem;
 }
 
 //? Headings
-h1 {
-  font-family: 'Playfair Display', serif;
+h1:not(.hero__intro) {
+  font-family: 'Lato', serif;
   color: $h1-text-color;
 
   font-size: 3.5rem;
@@ -30,12 +31,11 @@ h1 {
 
 //! CHANGE
 .heading-accent {
-  margin-bottom: 2rem; //! CHANGE
+  margin-bottom: 4rem;
 }
-//! CHANGE
 
 h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Lato', serif;
   color: $h2-text-color;
 
   font-size: 2rem;
@@ -45,7 +45,7 @@ h2 {
 
 //? Form Labels
 label {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Lato', serif;
   color: $h1-text-color;
 
   font-size: 1.4rem;
