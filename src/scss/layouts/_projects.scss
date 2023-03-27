@@ -9,18 +9,12 @@
 // TODO: Finalize styling
 
 #projects {
-  .projects__container {
-    display: grid;
-    grid-template-rows: repeat(6, 300px);
-    gap: 8rem;
-  }
-
   .project__item {
     @include flexCol;
     position: relative;
-
     max-width: 700px;
-    height: min-content;
+
+    margin-bottom: 5rem;
     padding: 0 0.5rem 2.5rem;
 
     border-radius: $border-radius;
@@ -35,7 +29,7 @@
     background: $card-bg-color;
     border-radius: $border-radius;
 
-    @include MqW($breakpoint2) {
+    @include MqW(650px) {
       padding-block: 1.5rem;
       margin-top: 1.25rem;
     }
@@ -83,6 +77,9 @@
       }
       &:nth-child(3) {
         color: #e1c94f;
+      }
+      &:nth-child(4) {
+        color: #db66a0;
       }
     }
   }
