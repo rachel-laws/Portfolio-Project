@@ -13,7 +13,9 @@ form {
   padding: 1rem 3rem;
 
   border-radius: $border-radius;
-  background: $nav-bg-color; //! CHANGE COLOR
+  background: $card-bg-color; //! CHANGE COLOR
+
+  box-shadow: 0 3px 13px 3px rgb(0 0 0 / 0.18);
 
   @include MqW($breakpoint1) {
     width: 100%;
@@ -60,4 +62,9 @@ form {
   width: 5rem;
   transform: rotate(22deg);
   filter: brightness(85%);
+
+  @include MqW($breakpoint2) {
+    top: -6.5rem;
+    left: 5%;
+  }
 }

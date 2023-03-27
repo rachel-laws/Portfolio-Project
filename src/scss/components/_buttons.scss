@@ -14,7 +14,7 @@ nav button {
   cursor: pointer;
 }
 
-//? Hero Call-To-Action
+//? home Call-To-Action
 .cta-btn {
   position: relative;
   overflow: hidden;
@@ -27,6 +27,7 @@ nav button {
   border-radius: $border-radius;
   border: 1px solid #fff;
   background: $tint-color;
+
   @supports (backdrop-filter: blur(2rem)) {
     backdrop-filter: blur(2rem);
   }
@@ -36,6 +37,7 @@ nav button {
     content: '';
     position: absolute;
     top: 0;
+    bottom: 0;
     left: -100%;
     z-index: -1;
 
@@ -74,7 +76,7 @@ input[type='submit'] {
     margin-top: 1rem;
     padding: 0.75rem;
 
-    font-weight: 700;
+    font-weight: 500;
     text-align: center;
 
     border-radius: $border-radius;
@@ -91,14 +93,13 @@ input[type='submit'] {
 
 //? Contact form button
 .sendFormBtn {
-  min-width: 10rem;
   margin-inline: auto;
   margin-bottom: 0.75rem;
-  padding: 0.75rem;
+  padding: 0.6rem 2rem;
+  font-weight: 500;
 
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: $button-text-color;
-  font-weight: 700;
   letter-spacing: 1px;
 
   border-radius: $border-radius;

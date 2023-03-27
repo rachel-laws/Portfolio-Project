@@ -6,42 +6,45 @@
 // TODO: Get better fonts
 // TODO: Finalize colors and styles
 
-.overlay,
-.background {
+.home__overlay,
+.home__background {
   position: absolute;
-  top: -3.5rem;
-
-  width: 100vw;
-  height: 100vh;
+  @include fullSize;
 }
 
-.overlay {
+.home__overlay {
   z-index: -2;
-
-  background: $hero-bg-color;
+  background: $home-bg-color;
 }
 
-.background {
+.home__background {
   z-index: -3;
 
-  background-image: url('/assets/images/bgimg.jpeg');
+  background-image: url('/assets/images/bg-img.jpeg');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 
   filter: contrast(150%);
   filter: brightness(70%);
 }
 
-.hero-content {
+// .home__mask {
+//   @include fullScreen;
+// }
+
+.home__content {
+  // position: fixed;
+  // inset: 0;
   @include flexCol;
-  gap: 15px;
+  gap: 12px;
+  // margin-top: $navbar-height;
 
   h1 {
+    position: relative;
     font-size: clamp(2rem, 10vw + 1rem, 4.5rem);
     font-weight: 400;
-    color: #fff;
-    position: relative;
-    font-family: 'Lato';
+    font-family: 'Lato', serif;
   }
 
   .line {
@@ -51,8 +54,7 @@
   }
 
   p {
-    color: #fff;
-    margin: 5px 0 0 0;
+    margin-block: 5px;
   }
 }
 

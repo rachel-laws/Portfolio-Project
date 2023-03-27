@@ -1,14 +1,12 @@
 //? Text
 
-$nav-text-color: #ffffff;
+$nav-text-color: #f0f0f0;
 $body-text-color: #fbfbfb;
 
 $h1-text-color: #fbfbfb;
 $h2-text-color: #fbfbfb;
-$name-color: linear-gradient(0deg, #003ad9, #5defff);
 
 //? Accents
-$accent-color: #3f93dc;
 $line-fade-color: linear-gradient(
   90deg,
   transparent,
@@ -19,23 +17,29 @@ $line-fade-color: linear-gradient(
 
 //? Buttons
 
-$button-color: linear-gradient(0deg, #0222f6, #00b0e1);
+$button-color: linear-gradient(to top left, #5e17d0, #2b82c9);
+
 $button-text-color: #fbfbfb;
 
 //? Backgrounds
 
-$nav-bg-color: rgb(0 0 0 / 0.7);
+$body-bg-color: linear-gradient(to top left, #1c1c1e, #232324);
 
-$hero-bg-color: linear-gradient(
+$nav-bg-color: rgba(11 11 11 / 0.8);
+
+$card-bg-color: rgb(21 21 21);
+
+$footer-bg-color: rgb(19 19 19);
+
+$home-bg-color: linear-gradient(
   to bottom right,
   #54acf4e1,
   #309df6a6,
   #4b4ef4c0,
   #683ab7d1
 );
+
+//? Misc
+$form-input-color: rgb(255 255 255 / 0.08);
+
 $tint-color: rgb(0 0 0 / 0.3);
-
-$body-bg-color: #1f1f1f;
-$footer-bg-color: #171717;
-
-$form-input-color: rgb(255 255 255 / 0.1);

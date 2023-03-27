@@ -19,6 +19,17 @@
   flex-direction: column;
 }
 
+//? Full screen
+@mixin fullScreen {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+@mixin fullSize {
+  width: 100%;
+  height: 100%;
+}
+
 // Media Queries
 
 //? Max-Width

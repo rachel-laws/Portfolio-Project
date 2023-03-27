@@ -18,7 +18,7 @@
   padding: 0.5rem;
 
   border-radius: $border-radius;
-  background-color: $nav-bg-color;
+  background-color: $card-bg-color;
 
   @include MqW($breakpoint2) {
     grid-template-columns: repeat(3, 1fr); // TODO: Improve this

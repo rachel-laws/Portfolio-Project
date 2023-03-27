@@ -13,7 +13,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 4rem;
+    gap: 8rem;
   }
 
   .project__item {
@@ -22,7 +22,7 @@
     grid-template-columns: 1fr 1fr;
 
     border-radius: $border-radius;
-    background: $nav-bg-color;
+    background: $card-bg-color;
 
     // Image order alternates on wider screens
     .switchOrder {
@@ -43,6 +43,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      padding: 1rem;
 
       border-radius: $border-radius;
     }
@@ -50,8 +51,8 @@
     figcaption {
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
-      line-height: 1.7rem;
+      gap: 1rem;
+      line-height: 1.6;
 
       padding-block: 2rem;
       padding-inline: calc(0.5rem + 4vw);

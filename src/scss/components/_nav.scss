@@ -2,10 +2,13 @@
 @use '../abstracts/abstracts' as *;
 
 nav {
+  position: fixed;
+  z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
+  width: 100vw;
   height: $navbar-height;
   padding-inline: $main-margin;
 
@@ -21,7 +24,7 @@ nav {
   ul {
     @include flexCenter;
 
-    gap: calc(0.5rem + 4vw);
+    gap: calc(0.5rem + 3vw);
     padding: 0.5rem 1rem;
 
     width: 100%;

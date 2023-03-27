@@ -1,6 +1,26 @@
 @use '../abstracts/abstracts' as *;
 @use '../utilities/utilities' as *;
 
+//? Global Styles
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  background: $body-bg-color;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+main {
+  @include adjustMargin;
+
+  margin-inline: $main-margin;
+}
+
 //? Resets
 
 * {
@@ -23,25 +43,7 @@ a {
   color: inherit;
 }
 
-//? Global Styles
-
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    scroll-behavior: smooth;
-  }
-}
-
-body {
-  background: $body-bg-color;
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-main {
-  @include adjustMargin;
-
-  margin-inline: $main-margin;
-}
+//? Sections
 
 section:not(#home) {
   @include flexCol;
@@ -53,7 +55,6 @@ section:not(#home) {
 #home {
   @include flexCol;
   min-height: 100vh;
-  position: relative;
 }
 
 footer {
