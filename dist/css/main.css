@@ -14,12 +14,12 @@ main {
 }
 @media only screen and (max-width: 768px) {
   main {
-    margin-inline: 3rem;
+    margin-inline: 10vw;
   }
 }
 @media only screen and (max-width: 481px) {
   main {
-    margin-inline: 0.5rem;
+    margin-inline: 0;
   }
 }
 
@@ -225,36 +225,63 @@ label {
 }
 
 .skills__container {
+  position: relative;
   display: grid;
   justify-content: space-evenly;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 0.5rem;
-  width: min-content;
+  grid-template-columns: repeat(3, 1fr);
+  min-width: 280px;
   margin-bottom: 4rem;
-  padding: 0.5rem;
+  padding: 1rem;
   border-radius: 3px;
   background-color: rgb(21, 21, 21);
+  transform-style: preserve-3d;
+  transform: perspective(5000px) rotateY(var(--rotateY)) rotateX(var(--rotateX));
+}
+.skills__container::before, .skills__container::after {
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+}
+.skills__container::after {
+  inset: -1rem;
+  background: linear-gradient(to top left, #5e17d0, #2b82c9);
+  transform: translateZ(-50px);
+  box-shadow: 0 0 15px rgba(82, 49, 215, 0.8156862745);
+}
+.skills__container::before {
+  inset: -0.3rem;
+  background: #000;
+  transform: translateZ(-49px);
+  filter: blur(15px);
+  opacity: 0.7;
 }
 @media only screen and (max-width: 481px) {
   .skills__container {
-    grid-template-columns: repeat(3, 1fr);
+    width: 90%;
   }
 }
-.skills__container figure {
+.skills__container .skills__item {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 5px;
   padding: 0.5rem;
+  gap: 3px;
   border-radius: 3px;
 }
 .skills__container img {
-  width: 3.8rem;
-  height: 3.5rem;
+  width: 3.5rem;
+  height: 2.9rem;
 }
-.skills__container figcaption {
+@media only screen and (max-width: 481px) {
+  .skills__container img {
+    width: 3.1rem;
+    height: 2.5rem;
+  }
+}
+.skills__container p {
   text-align: center;
+  text-shadow: 0 0 0.1em #fff, 0 0 0.2em rgba(255, 255, 255, 0.7450980392);
 }
 
 .certifications__container {
@@ -266,7 +293,7 @@ label {
 }
 @media only screen and (max-width: 481px) {
   .certifications__container {
-    width: 95%;
+    width: 90%;
   }
 }
 .certifications__container i {
@@ -510,7 +537,7 @@ footer .sourceCode i {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgb(21, 21, 21);
+  background: rgb(15, 15, 15);
 }
 
 ::-webkit-scrollbar-thumb {

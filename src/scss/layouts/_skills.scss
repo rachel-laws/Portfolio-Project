@@ -8,37 +8,68 @@
 // TODO: Finalize styles
 
 .skills__container {
+  position: relative;
   display: grid;
   justify-content: space-evenly;
-  grid-template-columns: repeat(5, 1fr); // TODO: Improve this
-  gap: 0.5rem;
+  grid-template-columns: repeat(3, 1fr);
 
-  width: min-content;
+  min-width: 280px;
   margin-bottom: 4rem;
-  padding: 0.5rem;
+  padding: 1rem;
 
   border-radius: $border-radius;
   background-color: $card-bg-color;
 
-  @include MqW($breakpoint2) {
-    grid-template-columns: repeat(3, 1fr); // TODO: Improve this
+  transform-style: preserve-3d;
+  transform: perspective(5000px) rotateY(var(--rotateY)) rotateX(var(--rotateX));
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    border-radius: inherit;
   }
 
-  figure {
+  &::after {
+    inset: -1rem;
+    background: $button-color;
+    transform: translateZ(-50px);
+    box-shadow: 0 0 15px #5231d7d0;
+  }
+
+  &::before {
+    inset: -0.3rem;
+    background: #000;
+    transform: translateZ(-49px);
+    filter: blur(15px);
+    opacity: 0.7;
+  }
+
+  @include MqW($breakpoint2) {
+    width: 90%;
+  }
+
+  .skills__item {
     @include flexCol;
-    gap: 5px;
     padding: 0.5rem;
+    gap: 3px;
 
     border-radius: $border-radius;
   }
 
   img {
-    width: 3.8rem;
-    height: 3.5rem;
+    width: 3.5rem;
+    height: 2.9rem;
+
+    @include MqW($breakpoint2) {
+      width: 3.1rem;
+      height: 2.5rem;
+    }
   }
 
-  figcaption {
+  p {
     text-align: center;
+    text-shadow: 0 0 0.1em #fff, 0 0 0.2em #ffffffbe;
   }
 }
 
@@ -51,7 +82,7 @@
   line-height: 1.5rem;
 
   @include MqW($breakpoint2) {
-    width: 95%;
+    width: 90%;
   }
 
   i {

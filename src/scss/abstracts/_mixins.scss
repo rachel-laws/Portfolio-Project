@@ -42,10 +42,10 @@
 //? Main Margins
 @mixin adjustMargin() {
   @include MqW($breakpoint1) {
-    margin-inline: 3rem;
+    margin-inline: 10vw;
   }
 
   @include MqW($breakpoint2) {
-    margin-inline: 0.5rem;
+    margin-inline: 0;
   }
 }
